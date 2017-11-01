@@ -1,7 +1,7 @@
 {
 	"name": "lliw",
 	"version": "1.0.0",
-	"license": "MIT",
+	"license": "WTFPL",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/tmont/lliw.git"

@@ -16,7 +16,14 @@ const colors = {
 	blue: 34,
 	magenta: 35,
 	cyan: 36,
-	white: 37
+	white: 37,
+
+	orange: [ 38, 5, 208 ],
+	gray: [ 38, 5, 245 ],
+	purple: [ 38, 5, 135 ],
+	pink: [ 38, 5, 212 ],
+	neonYellow: [ 38, 5, 190 ],
+	brown: [ 38, 5, 94 ],
 };
 
 const bgColors = {
@@ -36,6 +43,13 @@ const bgColors = {
 	magentaBold: 105,
 	cyanBold: 106,
 	whiteBold: 107,
+
+	orange: [48, 5, 208],
+	gray: [48, 5, 245],
+	purple: [48, 5, 135],
+	pink: [48, 5, 212],
+	neonYellow: [48, 5, 190],
+	brown: [48, 5, 94],
 };
 
 const ansi = (codeSet) => {
@@ -55,8 +69,14 @@ const makeLliw = (codeSet) => {
 		return wrap(string, codeSet);
 	};
 
-	const define = (propName, code) => {
-		const newCodes = new Set(codeSet).add(code);
+	const define = (propName, codes) => {
+		const newCodes = new Set(codeSet);
+		if (Array.isArray(codes)) {
+			newCodes.add(codes.join(';'));
+		} else {
+			newCodes.add(codes);
+		}
+
 		Object.defineProperty(innerLliw, propName, {
 			enumerable: true,
 			get: () => makeLliw(newCodes)

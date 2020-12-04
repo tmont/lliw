@@ -36,6 +36,30 @@ describe('lliw', () => {
 		it('should output string with cyan foreground color', () => {
 			verifyAnsi(lliw.cyan('foo'), 'foo', [36]);
 		});
+
+		it('should output string with orange foreground color', () => {
+			verifyAnsi(lliw.orange('foo'), 'foo', [38, 5, 208]);
+		});
+
+		it('should output string with purple foreground color', () => {
+			verifyAnsi(lliw.purple('foo'), 'foo', [38, 5, 135]);
+		});
+
+		it('should output string with gray foreground color', () => {
+			verifyAnsi(lliw.gray('foo'), 'foo', [38, 5, 245]);
+		});
+
+		it('should output string with brown foreground color', () => {
+			verifyAnsi(lliw.brown('foo'), 'foo', [38, 5, 94]);
+		});
+
+		it('should output string with pink foreground color', () => {
+			verifyAnsi(lliw.pink('foo'), 'foo', [38, 5, 212]);
+		});
+
+		it('should output string with neonYellow foreground color', () => {
+			verifyAnsi(lliw.neonYellow('foo'), 'foo', [38, 5, 190]);
+		});
 	});
 
 	describe('background colors', () => {
@@ -94,6 +118,30 @@ describe('lliw', () => {
 		it('should output string with bold cyan background color', () => {
 			verifyAnsi(lliw.cyanBoldBg('foo'), 'foo', [106]);
 		});
+
+		it('should output string with orange background color', () => {
+			verifyAnsi(lliw.orangeBg('foo'), 'foo', [48, 5, 208]);
+		});
+
+		it('should output string with purple background color', () => {
+			verifyAnsi(lliw.purpleBg('foo'), 'foo', [48, 5, 135]);
+		});
+
+		it('should output string with gray background color', () => {
+			verifyAnsi(lliw.grayBg('foo'), 'foo', [48, 5, 245]);
+		});
+
+		it('should output string with brown background color', () => {
+			verifyAnsi(lliw.brownBg('foo'), 'foo', [48, 5, 94]);
+		});
+
+		it('should output string with pink background color', () => {
+			verifyAnsi(lliw.pinkBg('foo'), 'foo', [48, 5, 212]);
+		});
+
+		it('should output string with neonYellow background color', () => {
+			verifyAnsi(lliw.neonYellowBg('foo'), 'foo', [48, 5, 190]);
+		});
 	});
 
 	describe('effects', () => {
@@ -137,6 +185,10 @@ describe('lliw', () => {
 		});
 		it('should output string with foreground color, background color and effects', () => {
 			verifyAnsi(lliw.red.blackBg.bold('foo'), 'foo', [31, 40, 1]);
+		});
+
+		it('should output string with multiple fancy colors', () => {
+			verifyAnsi(lliw.pink.purpleBg('foo'), 'foo', [38, 5, 212, 48, 5, 135]);
 		});
 	});
 

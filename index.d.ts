@@ -1,5 +1,5 @@
 interface Lliw {
-	(message: string): any;
+	(message: any): string;
 	readonly black: this;
 	readonly red: this;
 	readonly green: this;
@@ -8,6 +8,12 @@ interface Lliw {
 	readonly magenta: this;
 	readonly cyan: this;
 	readonly white: this;
+	readonly orange: this;
+	readonly purple: this;
+	readonly pink: this;
+	readonly gray: this;
+	readonly neonYellow: this;
+	readonly brown: this;
 
 	readonly bold: this;
 	readonly underline: this;
@@ -25,6 +31,12 @@ interface Lliw {
 	readonly magentaBg: this;
 	readonly cyanBg: this;
 	readonly whiteBg: this;
+	readonly orangeBg: this;
+	readonly purpleBg: this;
+	readonly pinkBg: this;
+	readonly grayBg: this;
+	readonly neonYellowBg: this;
+	readonly brownBg: this;
 
 	readonly blackBoldBg: this;
 	readonly redBoldBg: this;

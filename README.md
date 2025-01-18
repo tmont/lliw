@@ -1,6 +1,5 @@
 # lliw
 
-[![Build Status](https://travis-ci.org/tmont/lliw.svg?branch=master)](https://travis-ci.org/tmont/lliw)
 [![NPM version](https://img.shields.io/npm/v/lliw.svg)](https://www.npmjs.com/package/lliw)
 
 This is a node module for creating strings that use
@@ -17,8 +16,8 @@ Requires node v8.0.0 or higher.
 
 ## Usage
 ```javascript
-const lliw = require('lliw');
-// typescript: import lliw = require('lliw');
+const {lliw} = require('lliw');
+// typescript: import lliw from require('lliw');
 
 console.log(lliw.red('foo'));
 console.log(lliw.red.blackBg('foo'));

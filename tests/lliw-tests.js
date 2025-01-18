@@ -1,5 +1,5 @@
 const expect = require('expect.js');
-const lliw = require('../');
+const {lliw} = require('../');
 const exec = require('child_process').exec;
 const path = require('path');
 

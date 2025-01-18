@@ -1,4 +1,4 @@
-import lliw = require('../');
+import {lliw} from '../';
 
 console.log(lliw('foo'));
 console.log(lliw.red('foo'));

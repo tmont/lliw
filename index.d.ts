@@ -1,4 +1,4 @@
-interface Lliw {
+export interface Lliw {
 	(message: any): string;
 	readonly black: this;
 	readonly red: this;
@@ -48,6 +48,4 @@ interface Lliw {
 	readonly whiteBoldBg: this;
 }
 
-declare const lliw: Lliw;
-
-export = lliw;
+export const lliw: Lliw;

@@ -90,4 +90,4 @@ const makeLliw = (codeSet) => {
 	return innerLliw;
 };
 
-module.exports = makeLliw(new Set());
+exports.lliw = makeLliw(new Set());
